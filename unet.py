@@ -75,7 +75,7 @@ def ensure_model_file(
     model_file.parent.mkdir(parents=True, exist_ok=True)
     download_url = f"https://drive.google.com/uc?id={file_id}"
     print(f"Mengunduh model dari Google Drive ke '{model_path}'...")
-    gdown.download(download_url, str(model_file), quiet=False, fuzzy=True)
+    gdown.download(download_url, str(model_file), quiet=False)
 
     if not model_file.exists():
         raise FileNotFoundError(f"Gagal mengunduh model ke '{model_path}'.")
